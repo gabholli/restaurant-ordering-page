@@ -10,10 +10,56 @@
 </head>
 
 <body>
-  <div id="app">
-    <h1>Test</h1>
-  </div>
-  <script type="module" src="/main.js"></script>
-</body>
+  <header>
+    <img id="hamburger-image" src="images/hamburger.jpg" alt="Picture of hamburger">
+    <div id="hamburger-text-container">
+      <h1 id="jimmy-diner-text">Gabe's Diner</h1>
+      <p>The best burgers and pizzas in town.</p>
+    </div>
+  </header>
+  <main>
+    <div id="ordering-section">
+      <div class="food-feed" id="food-feed">
+      </div>
+    </div>
+  </main>
+  <div id="checkout-section">
+    <h3 id="checkout-heading">Your Order</h3>
 
-</html>
+    <div id="checkout-feed">
+
+    </div>
+    <hr id="checkout-hr">
+    <div id="total-price-container">
+
+    </div>
+    <div id="checkout-message-container">
+      <div id="checkout-message-inner">
+        <div id="checkout-message">
+          <p id="checkout-message-text">Thanks! Your order is on its way!</p>
+        </div>
+      </div>
+    </div>
+    <div id="checkout-button-container">
+      <button id="complete-order-button" data-order="ordering button">
+        Complete Order
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-feed" id="modal-feed">
+    <div class="modal" id="modal">
+      <div class="modal-inner" id="modal-inner">
+        <h3>Enter card details</h3>
+        <form id="modal-form">
+          <input class="form-input" type="text" placeholder="Enter your name" required />
+          <input class="form-input" type="number" placeholder="Enter your card number" maxlength="16" required />
+          <input class="form-input" type="number" placeholder="Enter CVV" maxlength="3" required />
+          <button type="submit" id="modal-button" data-modal-btn="modal button">Pay</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js" type="module"></script>
+</body>
