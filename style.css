@@ -6,3 +6,369 @@
   font-family: "Smythe";
   src: url("./fonts/Smythe-Regular.ttf");
 }
+
+.food-item-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 50px;
+  width: 508px;
+  height: 140px;
+  flex-shrink: 0;
+  /* gap: 50px; */
+  /* border-bottom: 1px solid #D2D2D2; */
+}
+
+.food-emoji {
+  font-size: 4.375rem;
+  padding-right: 30px;
+}
+
+.food-item-name {
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 60% */
+}
+
+.food-item-description {
+  color: #8B8B8B;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.food-item-price {
+  color: #000;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+
+.food-add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  top: 32%;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  color: #3C3C3C;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 27px;
+  border: 1px solid #DEDEDE;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  /* 75% */
+}
+
+hr {
+  background: #D2D2D2;
+  width: 508px;
+}
+
+#checkout-section {
+  display: inline-block;
+  margin: 0 auto;
+  width: 504px;
+  /* min-height: 319px; */
+  flex-shrink: 0;
+}
+
+#checkout-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4375rem;
+}
+
+#checkout-section h3 {
+  text-align: center;
+}
+
+#checkout-heading {
+  display: block;
+  color: #000;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  /* 60% */
+}
+
+#checkout-items-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-food-name {
+  color: #000;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  margin-right: 13px;
+  margin-bottom: 22px;
+  /* 60% */
+}
+
+.checkout-remove-button {
+  /* display: none; */
+  cursor: pointer;
+  background-color: white;
+  width: 77px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #BBB;
+  font-family: Verdana;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  /* 200% */
+}
+
+.checkout-item-price {
+  color: #000;
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+
+#checkout-hr {
+  display: none;
+  background-color: #393333;
+  width: 508px;
+}
+
+#total-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-total-price-text {
+  color: #0E0E0E;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 85.714% */
+}
+
+.checkout-total-price {
+  color: #0E0E0E;
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+
+#checkout-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#complete-order-button {
+  display: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--white, #FFF);
+  width: 508px;
+  padding: 18px 175px 18px 175px;
+  border-radius: 3px;
+  background: #16DB99;
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  margin: 53px 0;
+}
+
+#checkout-message-container {
+  display: none;
+  margin: 45px 0;
+}
+
+#checkout-message-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #ECFDF5;
+  width: 504px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+#checkout-message-text {
+  color: #065F46;
+  font-family: Smythe;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 52.5% */
+}
+
+#modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 524px;
+  height: 524px;
+  flex-shrink: 0;
+  border: 1px solid black;
+  border-radius: 3px;
+  background: whitesmoke;
+}
+
+#modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal h3 {
+  color: #000;
+  font-family: Verdana;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  /* 129.664% */
+}
+
+.form-input,
+#modal-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-input {
+  width: 475px;
+  height: 71px;
+  flex-shrink: 0;
+  margin: 20px auto;
+  border-radius: 3px;
+  border: 1.297px solid #757575;
+}
+
+#modal-button {
+  color: var(--white, #FFF);
+  width: 475px;
+  height: 71px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #16DB99;
+}
+
+.hidden {
+  display: none;
+}
+
+.add {
+  display: flex;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .food-item-container {
+    display: grid;
+    grid-template-areas:
+      ". emoji name . add"
+      ". emoji desc . add"
+      ". emoji price . add";
+    position: relative;
+    padding: 3.125em;
+    width: 508px;
+    height: 140px;
+    flex-shrink: 0;
+    /* gap: 50px; */
+    /* border-bottom: 1px solid #D2D2D2; */
+  }
+
+  .food-emoji {
+    grid-area: emoji;
+    font-size: 4.375rem;
+    padding-right: 30px;
+  }
+
+  .food-item-name {
+    grid-area: name;
+    color: #000;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 60% */
+  }
+
+  .food-item-description {
+    grid-area: desc;
+    color: #8B8B8B;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+  }
+
+  .food-item-price {
+    grid-area: price;
+    color: #000;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+  }
+
+  .food-add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 32%;
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    color: #3C3C3C;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 27px;
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    /* 75% */
+  }
+}

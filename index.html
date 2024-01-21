@@ -9,44 +9,45 @@
   <title>Vite App</title>
 </head>
 
-<body class="font-smythe flex flex-col justify-center p-4 max-w-96">
-  <header class="flex flex-col relative">
-    <img class="w-full" id="hamburger-image" src="images/hamburger.jpg" alt="Picture of hamburger">
-    <div class="absolute text-white bottom-5 left-5" id="hamburger-text-container">
-      <h1 class="text-3xl" id="jimmy-diner-text">Gabe's Diner</h1>
-      <p>The best burgers and pizzas in town.</p>
-    </div>
-  </header>
-  <main>
-    <div id="ordering-section">
-      <div class="food-feed" id="food-feed">
+<body class="font-smythe flex justify-center items-center">
+  <div class="flex flex-col justify-center items-center p-4 max-w-96">
+    <header class="flex flex-col relative">
+      <img class="w-full" id="hamburger-image" src="images/hamburger.jpg" alt="Picture of hamburger">
+      <div class="absolute text-white bottom-5 left-5" id="hamburger-text-container">
+        <h1 class="text-3xl" id="jimmy-diner-text">Gabe's Diner</h1>
+        <p>The best burgers and pizzas in town.</p>
       </div>
-    </div>
-  </main>
-  <div id="checkout-section">
-    <h3 id="checkout-heading">Your Order</h3>
-
-    <div id="checkout-feed">
-
-    </div>
-    <hr id="checkout-hr">
-    <div id="total-price-container">
-
-    </div>
-    <div id="checkout-message-container">
-      <div id="checkout-message-inner">
-        <div id="checkout-message">
-          <p id="checkout-message-text">Thanks! Your order is on its way!</p>
+    </header>
+    <main>
+      <div class="flex flex-col justify-center items-center" id="ordering-section">
+        <div class="food-feed" id="food-feed">
         </div>
       </div>
-    </div>
-    <div id="checkout-button-container">
-      <button id="complete-order-button" data-order="ordering button">
-        Complete Order
-      </button>
+    </main>
+    <div class="self-center" id=" checkout-section">
+      <h3 id="checkout-heading">Your Order</h3>
+
+      <div id="checkout-feed">
+
+      </div>
+      <hr id="checkout-hr">
+      <div id="total-price-container">
+
+      </div>
+      <div id="checkout-message-container">
+        <div id="checkout-message-inner">
+          <div id="checkout-message">
+            <p id="checkout-message-text">Thanks! Your order is on its way!</p>
+          </div>
+        </div>
+      </div>
+      <div id="checkout-button-container">
+        <button id="complete-order-button" data-order="ordering button">
+          Complete Order
+        </button>
+      </div>
     </div>
   </div>
-
   <div class="modal-feed" id="modal-feed">
     <div class="modal" id="modal">
       <div class="modal-inner" id="modal-inner">
