@@ -11,7 +11,7 @@ const customerMessageContainer = document.getElementById("checkout-message-conta
 const modalForm = document.getElementById("modal-form")
 const checkoutHr = document.getElementById("checkout-hr")
 
-document.addEventListener("click", function (e) {
+document.addEventListener("click", e => {
     if (e.target.dataset.order) {
         if (totalPrice !== 0) {
             handleOrderButtonClicked()
@@ -21,11 +21,12 @@ document.addEventListener("click", function (e) {
         handleAddButtonClicked(e.target.dataset.idNumber)
     }
     else if (e.target.dataset.remove) {
+        console.log(e.target.dataset.remove)
         handleRemoveButtonClicked(e.target.dataset.remove)
     }
 })
 
-modalForm.addEventListener("submit", function (e) {
+modalForm.addEventListener("submit", e => {
     e.preventDefault()
     handleModalButtonClicked()
 })
@@ -61,7 +62,7 @@ function handleModalButtonClicked() {
 }
 
 function removeItems(removeId) {
-    const targetObject = menuArray.filter(function (menuItem) {
+    const targetObject = menuArray.filter(menuItem => {
         return menuItem.id === removeId
     })[0]
 
@@ -100,8 +101,6 @@ function getFoodFeed() {
         addClass(addButtonContainer, "food-add-button-container")
         const foodAddButton = document.createElement("button")
         addClass(foodAddButton, "food-add-button")
-        // const itemBottomLine = document.createElement("hr")
-        // addClass(itemBottomLine, "bg-red-200")
         foodItemContainer.appendChild(emojiSubContainer)
         foodItemContainer.appendChild(foodDetails)
         foodItemContainer.appendChild(addButtonContainer)
@@ -110,7 +109,6 @@ function getFoodFeed() {
         foodDetails.appendChild(itemIngredients)
         foodDetails.appendChild(itemPrice)
         addButtonContainer.appendChild(foodAddButton)
-        // foodItemContainer.appendChild(itemBottomLine)
         setText(foodEmoji, menuItem.emoji)
         setText(itemName, menuItem.name)
         setText(itemIngredients, menuItem.ingredients.join(", "))
@@ -120,50 +118,32 @@ function getFoodFeed() {
         document.getElementById("food-feed").appendChild(foodItemContainer)
     })
 
-
-    // menuArray.forEach(function (item) {
-    //     foodFeedHtml += `
-    //         <div class="food-item-container">
-    //             <div>
-    //             <p class="food-emoji">${item.emoji}</p>
-    //             </div>
-    //             <div class="food-details">
-    //                 <p>${item.name}</p>
-    //                 <p class="food-item-description">${item.ingredients.join(", ")}</p>
-    //                 <p>$${item.price}</p>
-    //             </div>
-    //             <div class="add-button-container">
-    //                 <button class="food-add-button" data-id-number="${item.id}">+</button>
-    //             </div>
-    //         </div>
-    //         <hr>
-    //     `
-    // })
-
 }
 
 getFoodFeed()
 
 function renderCheckoutFeed() {
+
     let checkoutHtml = ""
 
     checkoutArray.forEach(function (item, index) {
         checkoutHtml += `
-        
+
         <div id="checkout-items-container">
-            <div id="checkout-item-left-side">
+            <div class="checkout-item-left-side" id="checkout-item-left-side">
                 <span class="checkout-food-name">${item.name}</span>
                 <button class="checkout-remove-button" data-remove="${item.id}">Remove</button>
             </div>
-            <div id="checkout-item-right-side">
+            <div class="checkout-item-right-side" id="checkout-item-right-side">
                 <span class="checkout-item-price">$${item.price}</span>
             </div>
         </div>
-        
+
         `
     })
 
     document.getElementById("checkout-feed").innerHTML = checkoutHtml
+
 }
 
 function renderTotalPrice() {
@@ -172,10 +152,10 @@ function renderTotalPrice() {
 
     totalPriceHtml = `
             
-            <div id="total-price-left-side">
+            <div class="total-price-left-side" id="total-price-left-side">
                 <span class="checkout-total-price-text">Total Price</span>
             </div>
-            <div id="total-price-right-side">
+            <div class="total-price-right-side" id="total-price-right-side">
                 <span class="checkout-total-price">$${totalPrice}</span>
             </div>
         
@@ -186,7 +166,7 @@ function renderTotalPrice() {
 
 function renderCheckoutDisplay(idNumber) {
 
-    const orderedItems = menuArray.filter(function (item) {
+    const orderedItems = menuArray.filter(item => {
         return item.id === idNumber
     })[0]
 
