@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      smythe: ["Smythe", "serif"]
+      smythe: ["Smythe", "serif"],
+      verdana: ["Verdana", "Geneva", "Tahoma", "sans-serif"]
     },
     extend: {},
   },

@@ -9,10 +9,11 @@
   <title>Vite App</title>
 </head>
 
-<body class="font-smythe flex justify-center items-center p-4 h-screen">
-  <div class="flex flex-col justify-center items-center md:w-[600px]">
+<body class="font-smythe flex justify-center items-center min-[1440px]:h-svh">
+  <div class="flex flex-col justify-center items-center md:w-[600px] border-black border-2">
     <header class="flex flex-col relative">
-      <img class="w-full" id="hamburger-image" src="images/hamburger.jpg" alt="Picture of hamburger">
+      <img class="w-[600px] h-[167px] object-cover" id="hamburger-image" src="images/hamburger.jpg"
+        alt="Picture of hamburger">
       <div class="absolute text-white bottom-5 left-5" id="hamburger-text-container">
         <h1 class="text-3xl" id="jimmy-diner-text">Gabe's Diner</h1>
         <p>The best burgers and pizzas in town.</p>
@@ -20,7 +21,7 @@
     </header>
     <main>
       <div class="flex flex-col justify-center items-center md:w-[600px]" id="ordering-section">
-        <div class="food-feed w-full" id="food-feed">
+        <div class="food-feed md:w-[600px]" id="food-feed">
         </div>
       </div>
     </main>
@@ -49,14 +50,23 @@
     </div>
 
     <div class="modal-feed" id="modal-feed">
-      <div class="modal hidden" id="modal">
-        <div class="modal-inner" id="modal-inner">
-          <h3>Enter card details</h3>
-          <form id="modal-form">
-            <input class="form-input" type="text" placeholder="Enter your name" required />
-            <input class="form-input" type="number" placeholder="Enter your card number" maxlength="16" required />
-            <input class="form-input" type="number" placeholder="Enter CVV" maxlength="3" required />
-            <button type="submit" id="modal-button" data-modal-btn="modal button">Pay</button>
+      <div class="modal hidden justify-center items-center fixed right-0
+        left-0 top-0 bottom-0 m-auto max-w-[524px] h-[524px] border-black
+        rounded-sm bg-neutral-100" id="modal">
+        <div class="modal-inner flex flex-col justify-center items-center gap-y-8" id="modal-inner">
+          <h3 class="text-black font-verdana text-xl font-semibold">Enter card details</h3>
+          <form class="flex flex-col justify-center items-center gap-y-8" id="modal-form">
+            <input class="font-verdana block mx-0 my-auto w-[250px] 
+              md:w-[473px] h-[71px] rounded-sm border-1 border-neutral-500" type="text" placeholder="Enter your name"
+              required />
+            <input class="font-verdana block mx-0 my-auto w-[250px] 
+              md:w-[473px] h-[71px] rounded-sm border-1 border-neutral-500" type="number"
+              placeholder="Enter your card number" maxlength="16" required />
+            <input class="font-verdana block mx-0 my-auto w-[250px] 
+              md:w-[473px] h-[71px] rounded-sm border-1 border-neutral-500" type="number" placeholder="Enter CVV"
+              maxlength="3" required />
+            <button class="font-verdana block mx-0 my-auto text-lg text-white w-[250px]
+              md:w-[473px] bg-emerald-400" type="submit" id="modal-button" data-modal-btn="modal button">Pay</button>
           </form>
         </div>
       </div>

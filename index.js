@@ -83,23 +83,25 @@ function getFoodFeed() {
 
     const foodFeedItems = menuArray.forEach(menuItem => {
         const foodItemContainer = document.createElement("div")
-        addClass(foodItemContainer, "bg-red-200")
+        addClass(foodItemContainer, "food-item-container")
         const emojiSubContainer = document.createElement("div")
-        addClass(emojiSubContainer, "bg-red-200")
+        addClass(emojiSubContainer, "food-emoji-container")
         const foodEmoji = document.createElement("p")
-        addClass(foodEmoji, "bg-red-200")
+        addClass(foodEmoji, "text-6xl")
         const foodDetails = document.createElement("div")
-        addClass(foodDetails, "bg-red-200")
+        addClass(foodDetails, "food-details")
         const itemName = document.createElement("p")
+        addClass(itemName, "text-3xl")
         const itemIngredients = document.createElement("p")
-        addClass(itemIngredients, "bg-red-200")
+        addClass(itemIngredients, "text-lg")
         const itemPrice = document.createElement("p")
+        addClass(itemPrice, "text-lg")
         const addButtonContainer = document.createElement("div")
-        addClass(addButtonContainer, "bg-red-400")
+        addClass(addButtonContainer, "food-add-button-container")
         const foodAddButton = document.createElement("button")
-        addClass(foodAddButton, "bg-red-200", "size-40")
-        const itemBottomLine = document.createElement("hr")
-        addClass(itemBottomLine, "bg-red-200")
+        addClass(foodAddButton, "food-add-button")
+        // const itemBottomLine = document.createElement("hr")
+        // addClass(itemBottomLine, "bg-red-200")
         foodItemContainer.appendChild(emojiSubContainer)
         foodItemContainer.appendChild(foodDetails)
         foodItemContainer.appendChild(addButtonContainer)
@@ -108,11 +110,11 @@ function getFoodFeed() {
         foodDetails.appendChild(itemIngredients)
         foodDetails.appendChild(itemPrice)
         addButtonContainer.appendChild(foodAddButton)
-        foodItemContainer.appendChild(itemBottomLine)
+        // foodItemContainer.appendChild(itemBottomLine)
         setText(foodEmoji, menuItem.emoji)
         setText(itemName, menuItem.name)
         setText(itemIngredients, menuItem.ingredients.join(", "))
-        setText(itemPrice, menuItem.price)
+        setText(itemPrice, `$${menuItem.price}`)
         setText(foodAddButton, "+")
         foodAddButton.setAttribute("data-id-number", menuItem.id)
         document.getElementById("food-feed").appendChild(foodItemContainer)
@@ -141,11 +143,6 @@ function getFoodFeed() {
 }
 
 getFoodFeed()
-// function renderFoodItems() {
-//     document.getElementById("food-feed").appendChild(getFoodFeedHtml())
-// }
-
-// renderFoodItems()
 
 function renderCheckoutFeed() {
     let checkoutHtml = ""

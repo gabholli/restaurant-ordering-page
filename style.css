@@ -6,3 +6,63 @@
   font-family: "Smythe";
   src: url("./fonts/Smythe-Regular.ttf");
 }
+
+.food-item-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "emoji name ."
+    "emoji details button"
+    "emoji details button";
+  border-bottom: 1px solid black;
+  padding: 1em .5em;
+}
+
+.food-emoji-container {
+  grid-area: emoji;
+}
+
+.food-details {
+  grid-area: details;
+  flex-direction: column;
+  gap: .2em;
+}
+
+.food-add-button-container {
+  grid-area: button;
+}
+
+.food-add-button {
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: .001em .4em;
+}
+
+.food-emoji-container,
+.food-details,
+.food-add-button-container {
+  display: flex;
+}
+
+.food-emoji-container,
+.food-add-button-container {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .food-item-container {
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "emoji . details . . button"
+      "emoji . details . . button"
+      "emoji . details . . button";
+    width: 600px;
+    padding: 3.125em;
+  }
+
+  .food-details {
+    gap: 1em;
+  }
+}
