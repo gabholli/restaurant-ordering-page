@@ -79,38 +79,73 @@ function removeItems(removeId) {
     renderTotalPrice()
 }
 
-function getFoodFeedHtml() {
+function getFoodFeed() {
 
-    let foodFeedHtml = ""
-
-    menuArray.forEach(function (item) {
-        foodFeedHtml += `
-            <div class="food-item-container">
-                <div>
-                <p class="food-emoji">${item.emoji}</p>
-                </div>
-                <div class="food-details">
-                    <p>${item.name}</p>
-                    <p class="food-item-description">${item.ingredients.join(", ")}</p>
-                    <p>$${item.price}</p>
-                </div>
-                <div class="add-button-container">
-                    <button class="food-add-button" data-id-number="${item.id}">+</button>
-                </div>
-            </div>
-            <hr>
-        `
+    const foodFeedItems = menuArray.forEach(menuItem => {
+        const foodItemContainer = document.createElement("div")
+        addClass(foodItemContainer, "bg-red-200")
+        const emojiSubContainer = document.createElement("div")
+        addClass(emojiSubContainer, "bg-red-200")
+        const foodEmoji = document.createElement("p")
+        addClass(foodEmoji, "bg-red-200")
+        const foodDetails = document.createElement("div")
+        addClass(foodDetails, "bg-red-200")
+        const itemName = document.createElement("p")
+        const itemIngredients = document.createElement("p")
+        addClass(itemIngredients, "bg-red-200")
+        const itemPrice = document.createElement("p")
+        const addButtonContainer = document.createElement("div")
+        addClass(addButtonContainer, "bg-red-400")
+        const foodAddButton = document.createElement("button")
+        addClass(foodAddButton, "bg-red-200", "size-40")
+        const itemBottomLine = document.createElement("hr")
+        addClass(itemBottomLine, "bg-red-200")
+        foodItemContainer.appendChild(emojiSubContainer)
+        foodItemContainer.appendChild(foodDetails)
+        foodItemContainer.appendChild(addButtonContainer)
+        emojiSubContainer.appendChild(foodEmoji)
+        foodDetails.appendChild(itemName)
+        foodDetails.appendChild(itemIngredients)
+        foodDetails.appendChild(itemPrice)
+        addButtonContainer.appendChild(foodAddButton)
+        foodItemContainer.appendChild(itemBottomLine)
+        setText(foodEmoji, menuItem.emoji)
+        setText(itemName, menuItem.name)
+        setText(itemIngredients, menuItem.ingredients.join(", "))
+        setText(itemPrice, menuItem.price)
+        setText(foodAddButton, "+")
+        foodAddButton.setAttribute("data-id-number", menuItem.id)
+        document.getElementById("food-feed").appendChild(foodItemContainer)
     })
 
-    return foodFeedHtml
+
+    // menuArray.forEach(function (item) {
+    //     foodFeedHtml += `
+    //         <div class="food-item-container">
+    //             <div>
+    //             <p class="food-emoji">${item.emoji}</p>
+    //             </div>
+    //             <div class="food-details">
+    //                 <p>${item.name}</p>
+    //                 <p class="food-item-description">${item.ingredients.join(", ")}</p>
+    //                 <p>$${item.price}</p>
+    //             </div>
+    //             <div class="add-button-container">
+    //                 <button class="food-add-button" data-id-number="${item.id}">+</button>
+    //             </div>
+    //         </div>
+    //         <hr>
+    //     `
+    // })
 
 }
 
-function renderFoodItems() {
-    document.getElementById("food-feed").innerHTML = getFoodFeedHtml()
-}
+getFoodFeed()
+// function renderFoodItems() {
+//     document.getElementById("food-feed").appendChild(getFoodFeedHtml())
+// }
 
-renderFoodItems()
+// renderFoodItems()
 
 function renderCheckoutFeed() {
     let checkoutHtml = ""
@@ -163,5 +198,14 @@ function renderCheckoutDisplay(idNumber) {
     renderCheckoutFeed()
     renderTotalPrice()
 
+}
+
+function addClass(name, className) {
+    name.classList.add(className)
+    return name
+}
+
+function setText(name, text) {
+    name.textContent = text
 }
 
