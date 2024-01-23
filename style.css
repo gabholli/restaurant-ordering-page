@@ -105,9 +105,9 @@
   .food-item-container {
     grid-auto-columns: 1fr;
     grid-template-areas:
-      "emoji . details . . button"
-      "emoji . details . . button"
-      "emoji . details . . button";
+      "emoji . details . button"
+      "emoji . details . button"
+      "emoji . details . button";
     width: 600px;
     padding: 3.125em;
   }
