@@ -5,6 +5,9 @@ export default {
     "./**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      smythe: ["Smythe", "serif"]
+    },
     extend: {},
   },
   plugins: [],
