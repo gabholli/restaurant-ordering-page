@@ -52,7 +52,7 @@ function handleRemoveButtonClicked(itemId) {
 
 function handleModalButtonClicked() {
     checkoutFeed.style.display = "none"
-    checkoutFeed.innerHTML = ""
+    checkoutFeed.textContent = ""
     checkoutHeading.style.display = "none"
     checkoutHr.style.display = "none"
     totalPriceContainer.style.display = "none"
@@ -126,7 +126,7 @@ function renderCheckoutFeed() {
 
     let checkoutHtml = ""
 
-    checkoutArray.forEach(function (item, index) {
+    checkoutArray.forEach(item => {
         checkoutHtml += `
 
         <div id="checkout-items-container">
