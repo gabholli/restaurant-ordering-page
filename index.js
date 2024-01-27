@@ -8,6 +8,7 @@ const checkoutFeed = document.getElementById("checkout-feed")
 const totalPriceContainer = document.getElementById("total-price-container")
 const orderButton = document.getElementById("complete-order-button")
 const customerMessageContainer = document.getElementById("checkout-message-container")
+const modalCloseButton = document.getElementById("modal-close-button")
 const modalForm = document.getElementById("modal-form")
 const checkoutHr = document.getElementById("checkout-hr")
 
@@ -24,6 +25,10 @@ document.addEventListener("click", e => {
         console.log(e.target.dataset.remove)
         handleRemoveButtonClicked(e.target.dataset.remove)
     }
+})
+
+modalCloseButton.addEventListener("click", e => {
+    modal.style.display = "none"
 })
 
 modalForm.addEventListener("submit", e => {

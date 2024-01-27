@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css">
-  <title>Vite App</title>
+  <title>Gabe's Diner</title>
 </head>
 
 <body class="font-smythe flex justify-center items-center min-[1920px]:h-svh">
@@ -54,7 +54,10 @@
       <div class="modal hidden justify-center items-center fixed right-0
         left-0 top-0 bottom-0 m-auto max-w-[524px] h-[524px] border-black
         rounded-sm bg-neutral-100" id="modal">
-        <div class="modal-inner flex flex-col justify-center items-center gap-y-8" id="modal-inner">
+        <div class="modal-inner flex flex-col justify-center items-center gap-y-8 size-full" id="modal-inner">
+          <div class="text-right w-full mr-16" id="modal-close-button">
+            <button class="text-2xl font-verdana">X</button>
+          </div>
           <h3 class="text-black font-verdana text-xl font-semibold">Enter card details</h3>
           <form class="flex flex-col justify-center items-center gap-y-4" id="modal-form">
             <input class="font-verdana block mx-0 my-auto w-[250px] 
