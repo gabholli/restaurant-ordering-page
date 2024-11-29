@@ -9,7 +9,7 @@ A website for ordering items created using HTML, Tailwind CSS, and JavaScript
 ### Installing
 - This web page does not require any direct installation on your computer
 ### Executing program
-- To access, go to https://gabholli-recipe-site.netlify.app
+- To access, go to https://gabholli-restaurant.netlify.app
   
 ## Authors
 Gabe Hollifield
